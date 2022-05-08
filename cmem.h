@@ -4,12 +4,12 @@
 #include <stdbool.h> //bools
 #include <stdlib.h> //free
 
-#ifndef CMEM__
-#define CMEM__
-
-#ifdef _cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
+
+#ifndef CMEM__
+#define CMEM__
 
 typedef struct MEM
 {
@@ -46,8 +46,8 @@ int merror(MEM* mem);
 //Return pointer to position in memory
 char* mtellptr(MEM* mem);
 
-#ifdef _cplusplus
-}
 #endif
 
+#ifdef __cplusplus
+}
 #endif

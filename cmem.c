@@ -1,5 +1,9 @@
 #include "cmem.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 MEM* mopen(char* src, size_t size)
 {
 	MEM* mem = (MEM*)malloc(sizeof(MEM));
@@ -97,3 +101,7 @@ int merror(MEM* mem)
 {
 	return (mem->err);
 };
+
+#ifdef __cplusplus
+}
+#endif
