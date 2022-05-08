@@ -67,7 +67,7 @@ void mseek(MEM* mem, long offset, int whence)
 		default: mem->position = 0;
 	}
 
-	if(mem->position > mem->size)
+	if(mem->position > mem->size || mem->position < 0)
 		mem->eod = true;
 };
 
